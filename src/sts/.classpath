@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/resources"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Develop/workspace-sts-2.3.0.RELEASE-20100122/z-mvc/target/z-mvc-1.0.0.CI-SNAPSHOT.jar" sourcepath="/z-mvc"/>
+	<classpathentry kind="lib" path="D:/Develop/workspace-sts-2.3.0.RELEASE-20100122/z-util/target/z-util-1.0.0.CI-SNAPSHOT.jar" sourcepath="/z-util/src/main/java"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

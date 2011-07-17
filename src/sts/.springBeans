@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[2.3.0.200912170948-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>src/main/java/net/zeng/jxsite/module/markup/MarkupModuleAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/news/NewsModuleAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/news/dao/NewsModelDaoAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/news/service/NewsServiceAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/news/web/NewsActionsAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/news/web/admin/NewsAdminActionsAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/product/ProductModuleAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/product/dao/ProductModelDaoAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/product/service/ProductServiceAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/product/web/ProductActionsAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/product/web/admin/ProductAdminActionsAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/system/SystemModuleAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/system/dao/SystemModelDaoAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/system/service/SystemServiceAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/system/web/SystemActionsAC.xml</config>
+		<config>src/main/java/net/zeng/jxsite/module/system/web/admin/SystemAdminActionsAC.xml</config>
+	</configs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
