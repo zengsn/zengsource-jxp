@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="modules.news.entry" class="net.zeng.jxsite.module.news.web.EntryAction" scope="prototype">
+		<property name="actionName">
+			<value>News Entry</value>
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService"/>
+		</property>
+	</bean>
+	<bean id="modules.news.list" class="net.zeng.jxsite.module.news.web.ListAction" scope="prototype">
+		<property name="actionName">
+			<value>News List</value>
+		</property>
+		<property name="entryService">
+			<ref bean="entryService"/>
+		</property>
+	</bean>
+
+	<import
+		resource="classpath:net/zeng/jxsite/module/news/web/admin/NewsAdminActionsAC.xml" />
+
+</beans>

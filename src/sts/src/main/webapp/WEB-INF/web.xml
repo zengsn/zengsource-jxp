@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>jxp-1.0.0-SNAPSHOT</display-name>
+	<filter>
+		<filter-name>Set Character Encoding</filter-name>
+		<filter-class>net.zeng.mvc.SetCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ignore</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Set Character Encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<!-- Separated by space -->
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<servlet>
+		<description>MVC Controller</description>
+		<display-name>InletServlet</display-name>
+		<servlet-name>InletServlet</servlet-name>
+		<servlet-class>net.zeng.mvc.InletServlet</servlet-class>
+		<init-param>
+			<!-- Used for action parsing, use default if null. -->
+			<description>Action Editor</description>
+			<param-name>actionEditor</param-name>
+			<param-value>default</param-value>
+		</init-param>
+		<init-param>
+			<description>Page URL Mapping</description>
+			<param-name>pageURL</param-name>
+			<param-value>jxp</param-value>
+		</init-param>
+		<init-param>
+			<description>XML URL Mapping</description>
+			<param-name>xmlURL</param-name>
+			<param-value>xmd</param-value>
+		</init-param>
+		<init-param>
+			<description>JSON URL Mapping</description>
+			<param-name>jsonURL</param-name>
+			<param-value>jsd</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InletServlet</servlet-name>
+		<url-pattern>*.jxp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InletServlet</servlet-name>
+		<url-pattern>*.xmd</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InletServlet</servlet-name>
+		<url-pattern>*.jsd</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tiles</servlet-name>
+		<servlet-class>org.apache.tiles.web.startup.TilesServlet</servlet-class>
+		<init-param>
+			<param-name>
+				org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
+			<param-value>/modules/system/tiles.xml,/modules/product/tiles.xml,/modules/markup/tiles.xml,/modules/sales/tiles.xml,/modules/report/tiles.xml,/modules/customer/tiles.xml,/modules/news/tiles.xml,/modules/blog/tiles.xml,/themes/default/tiles.xml,/themes/extjs/tiles.xml,/WEB-INF/tiles-defs.xml</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<!--
+		<filter> <filter-name>Tiles Filter</filter-name>
+		<filter-class>org.apache.tiles.web.startup.TilesFilter</filter-class>
+		<init-param> <param-name>
+		org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
+		<param-value>/themes/default/tiles.xml,/WEB-INF/tiles-defs.xml</param-value>
+		</init-param> </filter> <filter-mapping> <filter-name>Tiles
+		Filter</filter-name> <url-pattern>*.htm</url-pattern>
+		<dispatcher>REQUEST</dispatcher> </filter-mapping>
+	-->
+	<!--
+		<filter> <filter-name>JSPFilter</filter-name>
+		<filter-class>net.zeng.mvc.InletFilter</filter-class> </filter>
+		<filter-mapping> <filter-name>JSPFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern> </filter-mapping>
+	-->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

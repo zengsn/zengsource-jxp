@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.news.model.Category" table="newscategories"
+		lazy="false">
+		<id name="id" column="nca_id"></id>
+		<property name="name" column="nca_name" type="string" />
+		
+		<property name="index" column="nca_index" type="int" />
+
+		<many-to-one name="parent" column="nca_parentid"
+			not-null="false" cascade="none" insert="true" update="true"
+			class="net.zeng.jxsite.module.news.model.Category" />
+		
+		<list name="children" lazy="false" cascade="none">
+			<key column="nca_parentid" not-null="false" />
+			<list-index column="nca_index" />
+			<one-to-many class="net.zeng.jxsite.module.news.model.Category"
+				not-found="ignore" />
+		</list>
+
+		<property name="createdTime" column="nca_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="nca_updatedtime" type="timestamp"
+			update="true" />
+	</class>
+</hibernate-mapping>

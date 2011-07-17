@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+			
+	<bean id="categoryService" class="net.zeng.jxsite.module.news.service.CategoryServiceImpl">
+		<property name="categoryDao">
+			<ref bean="categoryDao" />
+		</property>
+	</bean>	
+	
+	<bean id="entryService" class="net.zeng.jxsite.module.news.service.EntryServiceImpl">
+		<property name="entryDao">
+			<ref bean="entryDao" />
+		</property>
+	</bean>
+	
+	<bean id="commentService" class="net.zeng.jxsite.module.news.service.CommentServiceImpl">
+		<property name="commentDao">
+			<ref bean="commentDao" />
+		</property>
+	</bean>
+
+</beans>

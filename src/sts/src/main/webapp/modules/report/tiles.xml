@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Admin Tiles -->
+	<definition name="report-config" template="/modules/system/admin/config.jsp"></definition>
+
+	<!-- Block Tiles -->
+
+</tiles-definitions>

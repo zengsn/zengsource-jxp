@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	<!-- Admin Tiles -->
+	<definition name="blog-config" template="/modules/news/admin/config.jsp"></definition>
+	<definition name="blog-manage" template="/modules/news/admin/manage.jsp"></definition>
+	<definition name="blog-editor" template="/modules/news/admin/editor.jsp"></definition>
+	<definition name="blog-comment" template="/modules/news/admin/comment.jsp"></definition>
+
+	<definition name="blog-list-block" template="/modules/news/blocks/latest.jsp"></definition>
+	
+
+</tiles-definitions>

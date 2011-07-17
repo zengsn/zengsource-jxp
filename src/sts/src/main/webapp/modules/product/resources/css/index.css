@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+
+#product-panel .x-grouptabs-panel {
+    background-color: #4E78B1;
+    border: solid 5px #4E78B1;
+}

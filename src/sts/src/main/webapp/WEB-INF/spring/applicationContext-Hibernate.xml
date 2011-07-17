@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath:hibernate.properties
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>net/zeng/jxsite/module/system/model/security/User.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/security/Role.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/security/RoleLinkUser.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/security/AclClass.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/security/AclObject.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/security/AclEntry.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/Configuration.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/Menu.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/Module.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/BlockPrototype.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/BlockInstance.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/BlockSetting.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/Page.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/system/model/UserInfo.hbm.xml
+				</value>
+
+				<value>net/zeng/jxsite/module/product/model/Catalog.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/product/model/Product.hbm.xml
+				</value>
+
+				<value>net/zeng/jxsite/module/news/model/Entry.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/news/model/Comment.hbm.xml
+				</value>
+				<value>net/zeng/jxsite/module/news/model/Category.hbm.xml
+				</value>
+
+				<!--
+					<value>net/zeng/jxsite/module/designlab/model/GalleryCatalog.hbm.xml</value>
+					<value>net/zeng/jxsite/module/designlab/model/GalleryImage.hbm.xml</value>
+					<value>net/zeng/jxsite/module/designlab/model/ImageItem.hbm.xml</value>
+					<value>net/zeng/jxsite/module/designlab/model/TextItem.hbm.xml</value>
+					<value>net/zeng/jxsite/module/designlab/model/Design.hbm.xml</value>
+					<value>net/zeng/jxsite/module/designlab/model/FontMeta.hbm.xml</value>
+				-->
+				<!-- 
+				<mapping class="com.denksoft.springstarter.entity.Clerk" />
+				<mapping class="com.denksoft.springstarter.entity.security.User" />
+				<mapping class="com.denksoft.springstarter.entity.security.Authority" />
+				<mapping class="com.denksoft.springstarter.entity.BankAccount" />
+				<mapping class="com.denksoft.springstarter.entity.AbstractSecureObject" />
+				<mapping class="com.denksoft.springstarter.entity.BankAccountOperation" />
+				<mapping class="com.denksoft.springstarter.entity.Customer" />
+				 -->
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<import
+		resource="classpath:net/zeng/jxsite/module/system/dao/SystemModelDaoAC.xml" />
+	<import
+		resource="classpath:net/zeng/jxsite/module/product/dao/ProductModelDaoAC.xml" />
+	<!--
+		import
+		resource="classpath:net/zeng/jxsite/module/designlab/dao/DesignLabModelDaoAC.xml"/
+	-->
+	<import resource="classpath:net/zeng/jxsite/module/news/dao/NewsModelDaoAC.xml" />
+
+</beans>

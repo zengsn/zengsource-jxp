@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.system.model.UserInfo" table="users"
+		lazy="false">
+		<id name="id" column="uid_"></id>
+		<property name="nickname" column="nickname_" type="string" />
+		<property name="firstName" column="firstname_" type="string" />
+		<property name="lastName" column="lastname_" type="string" />
+		<property name="email" column="email_" type="string" />
+		<property name="phoneNo" column="phoneno_" type="string" />
+		<property name="status" column="status_" type="int" />
+		<property name="lastLoginTime" column="lastlogintime_" type="timestamp" />
+
+		<!--
+			<one-to-one name="user"
+			class="net.zeng.jxsite.module.system.model.security.User"
+			constrained="true" />
+		-->
+		<component name="user"
+			class="net.zeng.jxsite.module.system.model.security.User">
+			<property name="id" column="uid_" type="string" insert="false" update="false"/>
+			<property name="username" column="username_" type="string" />
+			<property name="password" column="password_" type="string" />
+			<property name="enabled" column="enabled_" type="int" />
+			<list name="roles" table="roleslinkusers" cascade="save-update">
+				<key column="userid_" />
+				<index column="index_" />
+				<many-to-many column="roleid_"
+					class="net.zeng.jxsite.module.system.model.security.Role" />
+			</list>
+		</component>
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>blog</id>
+	<index>8</index>
+	<status>2</status>
+	<name>博客</name>
+	<menus>
+		<menu type="admin">
+			<item>
+				<id>blog-config</id>
+				<name>基本设置</name>
+				<icon>config.gif</icon>
+				<href>blog-config.htm</href>
+				<index>1</index>
+			</item>
+			<item>
+				<id>blog-manage</id>
+				<name>日志管理</name>
+				<icon>module.gif</icon>
+				<href>blog-module.htm</href>
+				<index>2</index>
+			</item>
+			<item>
+				<id>blog-editor</id>
+				<name>日志编辑</name>
+				<icon>module.gif</icon>
+				<href>blog-editor.htm</href>
+				<index>3</index>
+			</item>
+			<item>
+				<id>blog-comment</id>
+				<name>评论管理</name>
+				<icon>module.gif</icon>
+				<href>blog-comment.htm</href>
+				<index>4</index>
+			</item>
+		</menu>
+	</menus>
+	<icons>
+		<icon id="16*16">/modules/blog/resources/images/blog_16_16.gif</icon>
+		<icon id="32*32">/modules/markup/resources/images/blog_32_32.gif</icon>
+		<icon id="64*64">/modules/markup/resources/images/blog_64_64.gif</icon>
+		<icon id="128*128">/modules/markup/resources/images/blog_128_128.gif</icon>
+	</icons>
+	<configs>
+	</configs>
+	<blocks>
+		<block id="blog.blog-list">
+			<name>日志列表</name>
+			<type>dynamic</type>
+			<singleton>false</singleton>
+			<template>blog-list-block</template>
+			<description>Some comments ...</description>
+		</block>
+	</blocks>
+	<pages>
+		<page>
+			<id>blog-entry</id>
+			<name>日志查看</name>
+			<url>/modules/blog/entry</url>
+			<!-- defaultBlock>product.product-list</defaultBlock-->
+			<description>查看日志</description>
+		</page>
+	</pages>
+</module>

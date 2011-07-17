@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="net.zeng.jxsite.module.system.model.BlockInstance"
+		table="blockinstances">
+
+		<id name="id" column="bi_id" />
+		<property name="name" column="bi_name" type="string" />
+		<property name="index" column="bi_index" type="int" />
+		<property name="cls" column="bi_cls" type="string" />
+		<property name="style" column="bi_style" type="string" />
+		<property name="colspan" column="bi_colspan" type="int" />
+		<property name="rowspan" column="bi_rowspan" type="int" />
+
+		<property name="html" column="bi_html" type="string" />
+
+		<many-to-one name="prototype" column="bi_prototypeid" lazy="false"
+			not-null="false" cascade="none" insert="true" update="false" />
+		
+		<set name="pages" lazy="false" cascade="none" table="pageblocks">
+			<key column="pb_blockid" not-null="true" />
+			<many-to-many class="net.zeng.jxsite.module.system.model.Page" 
+				column="pb_pageid" not-found="exception" />
+		</set>
+		<!-- 
+		<many-to-one name="page" column="bi_pageid" lazy="false"
+			not-null="false" cascade="none" insert="true" update="true" />
+		-->
+			
+		<set name="settings" lazy="false" cascade="none">
+			<key column="bs_instanceid" not-null="false" />
+			<one-to-many class="net.zeng.jxsite.module.system.model.BlockSetting"
+				not-found="ignore" />
+		</set>
+
+		<property name="description" column="bi_description" type="string" /> 
+		<property name="createdTime" column="bi_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="bi_updatedtime" type="timestamp"
+			update="true" />
+
+	</class>
+
+</hibernate-mapping>

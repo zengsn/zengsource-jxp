@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+	<totalCount>1</totalCount>
+	<file>
+		<filename>penguine_256.png</filename>
+		<size>123.45</size>
+		<status>Completed</status>
+	</file>
+</response>

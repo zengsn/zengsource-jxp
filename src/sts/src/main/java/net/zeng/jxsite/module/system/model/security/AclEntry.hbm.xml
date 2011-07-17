@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.system.model.security.AclEntry"
+		table="aclentries" lazy="false">
+		<id name="id" column="eid_"></id>
+
+		<many-to-one name="role" column="roleid_"
+			class="net.zeng.jxsite.module.system.model.security.Role" />
+
+		<many-to-one name="aclObject" column="aclobjectid_"
+			class="net.zeng.jxsite.module.system.model.security.AclObject" />
+
+		<property name="mask" column="mask_" type="int"/>
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

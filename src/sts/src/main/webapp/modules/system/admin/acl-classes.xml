@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+	<totalCount>20</totalCount>
+	<class>
+		<id>123</id>
+		<name>net.zeng.jxsite.module.system.model.Page</name>
+		<description>页面</description>
+	</class>
+</response>

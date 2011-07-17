@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.news.model.Comment" table="newscomments"
+		lazy="false">
+		<id name="id" column="ncm_id"></id>
+		<property name="text" column="ncm_text" type="string" />
+		<property name="commenter" column="ncm_commenter" type="string" />
+		<property name="email" column="ncm_email" type="string" />
+		
+		<property name="index" column="ncm_index" type="int" />
+		<property name="status" column="ncm_status" type="int" />
+
+		<many-to-one name="targetEntry" column="ncm_targetentryid"
+			not-null="false" cascade="none" insert="true" update="true"
+			class="net.zeng.jxsite.module.news.model.Entry" />
+
+		<many-to-one name="targetComment" column="ncm_targetcommentid"
+			not-null="false" cascade="none" insert="true" update="true"
+			class="net.zeng.jxsite.module.news.model.Comment" />
+		
+		<list name="commentList" lazy="false" cascade="none">
+			<key column="ncm_parentid" not-null="false" />
+			<list-index column="ncm_index" />
+			<one-to-many class="net.zeng.jxsite.module.news.model.Comment"
+				not-found="ignore" />
+		</list>
+
+		<property name="createdTime" column="ncm_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="ncm_updatedtime" type="timestamp"
+			update="true" />
+	</class>
+</hibernate-mapping>

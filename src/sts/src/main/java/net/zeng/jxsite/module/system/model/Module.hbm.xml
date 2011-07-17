@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.system.model.Module" table="modules"
+		lazy="true">
+		<id name="id" column="md_id"></id>
+		<property name="name" column="md_name" type="string" unique="true" />
+		<property name="status" column="md_status" type="int" />
+		<property name="index" column="md_index" type="int" />
+			
+		<!-- map name="menuMap" table="modulemenus" lazy="false" inverse="true">
+			<key column="mm_moduleid" />
+			<index column="mm_menutype" type="string" />
+			<many-to-many column="mm_menuid"
+				class="net.zeng.jxsite.module.system.model.Menu" unique="true"
+				not-found="ignore" />
+		</map-->
+
+		<set name="menuSet" lazy="false" inverse="true">
+			<key column="mn_moduleid" not-null="true" />
+			<one-to-many class="net.zeng.jxsite.module.system.model.Menu"
+				not-found="ignore" />
+		</set>
+
+		<set name="blockPrototypes" lazy="false" inverse="true">
+			<key column="bp_moduleid" not-null="true" />
+			<one-to-many class="net.zeng.jxsite.module.system.model.BlockPrototype"
+				not-found="ignore" />
+		</set>
+
+		<set name="pages" lazy="false" inverse="true">
+			<key column="pg_moduleid" not-null="true" />
+			<one-to-many class="net.zeng.jxsite.module.system.model.Page"
+				not-found="ignore" />
+		</set>
+
+		<property name="createdTime" column="md_createdtime" type="timestamp"
+			update="false" />
+		<property name="updatedTime" column="md_updatedtime" type="timestamp"
+			update="false" />
+	</class>
+</hibernate-mapping>

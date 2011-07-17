@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	<bean id="admin.designlab.gallerycatalog" class="net.zeng.jxsite.module.designlab.web.admin.GalleryCatalogAction" scope="prototype">
+		<property name="actionName">
+			<value>AdminGalleryCatalog</value>
+		</property>
+		<property name="galleryCatalogService">
+			<ref bean="galleryCatalogService"/>
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService"/>
+		</property>
+	</bean>
+	<bean id="admin.designlab.galleryimageupload" class="net.zeng.jxsite.module.designlab.web.admin.GalleryImageUploadAction" scope="prototype">
+		<property name="actionName">
+			<value>AdminGalleryImageUpload</value>
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService"/>
+		</property>
+		<property name="galleryImageService">
+			<ref bean="galleryImageService"/>
+		</property>
+		<property name="galleryCatalogService">
+			<ref bean="galleryCatalogService"/>
+		</property>
+	</bean>
+	
+	<bean id="admin.designlab.galleryimage" class="net.zeng.jxsite.module.designlab.web.admin.GalleryImageAction" scope="prototype">
+		<property name="actionName">
+			<value>AdminGalleryImage</value>
+		</property>
+		<property name="galleryImageService">
+			<ref bean="galleryImageService"/>
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService"/>
+		</property>
+	</bean>
+	
+	<bean id="admin.designlab.fontmeta" class="net.zeng.jxsite.module.designlab.web.admin.FontMetaAction" scope="prototype">
+		<property name="actionName">
+			<value>AdminFontMeta</value>
+		</property>
+		<property name="fontMetaService">
+			<ref bean="fontMetaService"/>
+		</property>
+		<property name="ConfigurationService">
+			<ref bean="ConfigurationService"/>
+		</property>
+	</bean>
+	
+
+</beans>

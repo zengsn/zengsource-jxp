@@ -1,0 +1,155 @@
+.icon-login {
+	background-image: url(../icons/silk/gif/user.gif) !important;
+}
+.icon-info {
+	background-image: url(../icons/silk/gif/information.gif) !important;
+}
+.icon-be-tree {	
+	background-image: url(../icons/silk/gif/house_link.gif) !important;
+}
+.icon-be-home {	
+	background-image: url(../icons/silk/gif/application_home.gif) !important;
+}
+.icon-be-baseconfig {	
+	background-image: url(../icons/silk/gif/cog.gif) !important;
+}
+.icon-be-catalog {	
+	background-image: url(../icons/silk/gif/folder_lightbulb.gif) !important;
+}
+.icon-be-product {	
+	background-image: url(../icons/silk/gif/folder_table.gif) !important;
+}
+.icon-be-advertisement {	
+	background-image: url(../icons/silk/gif/folder_table.gif) !important;
+}
+.icon-be-stats-product {
+	background-image: url(../icons/silk/gif/chart_bar.gif) !important;
+}
+.icon-be-stats-visitor {
+	background-image: url(../icons/silk/gif/chart_pie.gif) !important;
+}
+.icon-be-new-clients {
+	background-image: url(../icons/silk/gif/group_go.gif) !important;
+}
+.icon-be-new-orders {
+	background-image: url(../icons/silk/gif/cart_go.gif) !important;
+}
+.icon-be-order-status {
+	background-image: url(../icons/silk/gif/cart_edit.gif) !important;
+}
+.icon-cat {
+	background-image: url(../icons/silk/gif/folder_explore.gif) !important;
+}
+.icon-cat-men {
+	background-image: url(../images/tshirt/tshirt_blue_16.gif) !important;
+}
+.icon-cat-girls {
+	background-image: url(../images/tshirt/tshirt_girl_16.gif) !important;
+}
+.icon-cat-kids {
+	background-image: url(../images/tshirt/tshirt_kid_16.gif) !important;
+}
+.icon-cat-couple {
+	background-image: url(../images/tshirt/tshirt_couple_16.gif) !important;
+}
+.icon-cat-family {
+	background-image: url(../images/tshirt/tshirt_family_16.gif) !important;
+}
+
+
+.icon-expand-all {
+    background-image: url(../../extjs/docs/resources/expand-all.gif) !important;
+}
+.icon-collapse-all {
+    background-image: url(../../extjs/docs/resources/collapse-all.gif) !important;
+}
+.icon-refresh {
+    background-image: url(../icons/silk/gif/arrow_refresh.gif) !important;
+    /*background-image: url(../../extjs/resources/images/default/grid/loading.gif) !important;*/
+}
+
+.btn-login {
+	background-image: url(../icons/mini/gif/action_forward.gif) !important;
+}
+.btn-logout {
+	background-image: url(../icons/mini/gif/action_back.gif) !important;
+}
+
+.btn-forget {
+	background-image: url(../icons/silk/gif/help.gif) !important;
+}
+.btn-help {
+	background-image: url(../icons/silk/gif/help.gif) !important;
+}
+.btn-print {
+	background-image: url(../icons/silk/gif/printer.gif) !important;
+}
+.btn-add {
+	background-image: url(../icons/silk/gif/add.gif) !important;
+}
+.btn-edit {
+	background-image: url(../icons/silk/gif/pencil.gif) !important;
+}
+.btn-modify {
+	background-image: url(../icons/silk/gif/pencil.gif) !important;
+}
+.btn-save {
+	background-image: url(../icons/silk/gif/disk_multiple.gif) !important;
+}
+.btn-delete {
+	background-image: url(../icons/silk/gif/delete.gif) !important;
+}
+.btn-on {
+	background-image: url(../icons/silk/gif/accept.gif) !important;
+}
+.btn-off {
+	background-image: url(../icons/silk/gif/cancel.gif) !important;
+}
+.btn-zoomin {
+	background-image: url(../icons/silk/gif/zoom_in.gif) !important;
+}
+.btn-zoomout {
+	background-image: url(../icons/silk/gif/zoom_out.gif) !important;
+}
+.btn-refresh {
+	background-image: url(../icons/silk/gif/arrow_refresh.gif) !important;
+}
+.btn-scan {
+	background-image: url(../icons/silk/gif/folder_magnify.gif) !important;
+}
+.btn-upload {
+	background-image: url(../icons/silk/gif/arrow_up.gif) !important;
+}
+.btn-home {
+	background-image: url(../icons/silk/gif/house.gif) !important;
+}
+.btn-be-home {	
+	background-image: url(../icons/silk/gif/application_home.gif) !important;
+}
+.btn-navi {
+	background-image: url(../icons/silk/gif/bullet_go.gif) !important;
+}
+.btn-home {	
+	background-image: url(../icons/silk/gif/house.gif) !important;
+}
+.btn-person {	
+	background-image: url(../icons/silk/gif/user_suit.gif) !important;
+}
+.btn-group {	
+	background-image: url(../icons/silk/gif/group.gif) !important;
+}
+.btn-design {	
+	background-image: url(../icons/silk/gif/picture_edit.gif) !important;
+}
+.btn-shop {	
+	background-image: url(../icons/silk/gif/money_yen.gif) !important;
+}
+.btn-forum {	
+	background-image: url(../icons/silk/gif/comments.gif) !important;
+}
+.btn-next {	
+	background-image: url(../icons/silk/gif/arrow_right.gif) !important;
+}
+.btn-previous {	
+	background-image: url(../icons/silk/gif/arrow_left.gif) !important;
+}

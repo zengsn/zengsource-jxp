@@ -1,0 +1,25 @@
+
+/* Gray Box */
+.x-box-gray .x-box-bl, .x-box-gray .x-box-br, .x-box-gray .x-box-tl, .x-box-gray .x-box-tr {
+	background-image: url(../images/corners-gray.gif);
+}
+
+.x-box-gray .x-box-bc, .x-box-gray .x-box-mc, .x-box-gray .x-box-tc {
+	background-image: url(../images/tb-gray.gif);
+}
+
+.x-box-gray .x-box-mc {
+	background-color: #eeeeee;
+}
+
+.x-box-gray .x-box-mc h3 {
+	color: #17385b;
+}
+
+.x-box-gray .x-box-ml {
+	background-image: url(../images/l-gray.gif);
+}
+
+.x-box-gray .x-box-mr {
+	background-image: url(../images/r-gray.gif);
+}

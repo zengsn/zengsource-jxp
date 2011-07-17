@@ -1,0 +1,2 @@
+
+Ext.onReady();

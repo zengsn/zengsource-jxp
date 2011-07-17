@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+	<totalCount>20</totalCount>
+	<entry>
+		<id>123</id>
+		<object>hfhfhhf</object>
+		<role>admin</role>
+		<mask>3</mask>
+		<createdTime>2010-02-14 22:33:44</createdTime>
+	</entry>
+</response>

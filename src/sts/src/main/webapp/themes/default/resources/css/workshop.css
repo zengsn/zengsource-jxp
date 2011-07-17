@@ -1,0 +1,349 @@
+/*
+ * Ext JS Library 2.1
+ * Copyright(c) 2006-2008, Ext JS, LLC.
+ * licensing@extjs.com
+ * 
+ * http://extjs.com/license
+ */
+
+/*===================================
+/*   Basic page styles
+/*===================================*/
+//body {
+//    font-family:'lucida grande',tahoma,arial,sans-serif;
+//    font-size:11px;
+//}
+//a {
+//    color:#15428B;
+//}
+//a:link, a:visited {
+//    text-decoration: none;
+//}
+//a:hover {
+//    text-decoration: underline;
+//}
+#header {
+    background: #7F99BE url(images/layout-browser-hd-bg.gif) repeat-x center;
+}
+#header h1 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+#start-div h2 {
+    font-size: 12px;
+    color: #555;
+    padding-bottom:5px;
+    border-bottom:1px solid #C3D0DF;
+}
+#start-div p {
+    margin: 10px 0;
+}
+#details-panel h2 {
+    padding:10px 10px 0;
+    font-size:12px;
+    color:#15428B;
+}
+#details-panel p {
+    padding:10px 10px 0;
+}
+#details-panel pre {
+    border-top:1px dotted #ddd;
+    border-bottom:1px dotted #ddd;
+    margin-top:10px;
+    padding:0 5px;
+    background:#f5f5f5;
+}
+#details-panel .details-info {
+    margin:15px;
+    padding:15px;
+    border:1px dotted #999;
+    color:#555;
+    background: #f9f9f9;
+}
+
+
+/* Toolbar icons for absolute form example: */
+.icon-send {
+    background-image:url(images/email_go.png) !important;
+}
+.icon-save {
+    background-image:url(images/disk.png) !important;
+}
+.icon-print {
+    background-image:url(images/printer.png) !important;
+}
+.icon-spell {
+    background-image:url(images/spellcheck.png) !important;
+}
+.icon-attach {
+    background-image:url(images/page_attach.png) !important;
+}
+
+
+/*===================================
+/*  start page styles
+/*====================================*/
+
+    #edit-swap {
+        
+    }
+    #edit-swap dd {
+        float:left;
+        width:300px;
+        height:74px;
+        margin:5px 0px 0px 0px;
+        cursor:pointer;
+        zoom:1;
+    }
+    #edit-swap dd img {
+        width:64px;
+        height:64px;
+        margin:5px 0 0 0px;
+        float:left;
+    }
+
+    #edit-swap dd div {
+        float:left;
+        width:200px;
+        margin-left:10px;
+    }
+
+    #edit-swap dd h4 {
+        font-family:tahoma,arial,san-serif;
+        color:#555;
+        font-size:11px;
+        font-weight:bold;
+    }
+    #edit-swap dd p {
+        color:#777;
+    }
+    #edit-swap dd.over {
+        background: #F5FDE3 url(../resources/images/lab/item_over.gif) no-repeat;
+    }
+    #loading-mask{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index:20000;
+        background-color:white;
+    }
+    #loading{
+        position:absolute;
+        left:45%;
+        top:40%;
+        padding:2px;
+        z-index:20001;
+        height:auto;
+    }
+    #loading a {
+        color:#225588;
+    }
+    #loading .loading-indicator{
+        background:white;
+        color:#444;
+        font:bold 13px tahoma,arial,helvetica;
+        padding:10px;
+        margin:0;
+        height:auto;
+    }
+    #loading-msg {
+        font: normal 10px arial,tahoma,sans-serif;
+    }
+    
+    #edit-swap .x-panel-body {
+        background-color:#fff;
+        border:1px solid;
+        border-color:#fafafa #fafafa #fafafa #fafafa;
+    }
+    #sample-ct {
+        border:1px solid;
+        border-color:#dadada #ebebeb #ebebeb #dadada;
+        padding:2px;
+    }
+
+    #edit-swap h2 {
+        border-bottom: 2px solid #99bbe8;
+        cursor:pointer;
+        padding-top:6px;
+    }
+    #edit-swap h2 div {
+        background:transparent url(../../extjs/resources/images/default/grid/group-expand-sprite.gif) no-repeat 3px -47px;
+        padding:4px 4px 4px 17px;
+        color:#3764a0;
+        font:bold 11px tahoma, arial, helvetica, sans-serif;
+    }
+    #edit-swap .collapsed h2 div {
+        background-position: 3px 3px;
+    }
+    #edit-swap .collapsed dl {
+        display:none;
+    }
+    .x-window {
+        text-align:left;
+    }
+
+
+.icon-lab-swap {
+	background-image: url( ../images/icons/star.gif ) !important;
+}
+.icon-lab-text {
+	background-image: url( ../images/icons/font.gif ) !important;
+}
+.icon-lab-art {
+	background-image: url( ../images/icons/image.gif ) !important;
+}
+.icon-lab-upload {
+	background-image: url( ../images/icons/application_get.gif ) !important;
+}
+
+.save .x-btn-text {
+    background-image: url(../images/icons/disk.gif);
+}
+.preview .x-btn-text {
+    background-image: url(../images/icons/zoom.gif);
+}
+.print .x-btn-text {
+    background-image: url(../images/icons/printer.gif);
+}
+div.hot-stars {
+	height: 16px;
+	background: url(../images/icons/star.gif) repeat-x;
+}
+
+
+#img-chooser-dlg .details{ 
+    padding: 10px; 
+    text-align: center; 
+} 
+#img-chooser-dlg .details-info{ 
+    border-top: 1px solid #cccccc; 
+    font: 11px Arial, Helvetica, sans-serif; 
+    margin-top: 5px; 
+    padding-top: 5px; 
+    text-align: left; 
+} 
+#img-chooser-dlg .details-info b{ 
+    color: #555555; 
+    display: block; 
+    margin-bottom: 4px; 
+} 
+#img-chooser-dlg .details-info span{ 
+    display: block; 
+    margin-bottom: 5px; 
+    margin-left: 5px; 
+} 
+/*Swap Style panel*/
+#swap-style{ 
+    background: white; 
+    font: 11px Arial, Helvetica, sans-serif;
+} 
+#swap-style .style{ 
+    /*background: #dddddd; */
+    padding: 3px; 
+} 
+#swap-style .style img{ 
+    height: 72px; 
+    width: 72px; 
+} 
+#swap-style .style-wrap{ 
+    float: left; 
+    margin: 4px; 
+    margin-right: 0; 
+    padding: 5px;
+} 
+#swap-style .style-wrap span{ 
+    display: block; 
+    overflow: hidden; 
+    text-align: center; 
+} 
+#swap-style .x-view-over{
+    border:1px solid #DCDCDC; 
+    background: #EFEFEF url(../../extjs/resources/images/default/grid/row-over.gif) repeat-x left top; 
+    padding: 4px; 
+}
+#swap-style .x-view-selected{ 
+    background: #DFEDFF; 
+    border: 1px solid #6593cf; 
+    padding: 4px; 
+} 
+#swap-style .x-view-selected .style{ 
+    background:transparent; 
+}
+#swap-style .x-view-selected span{ 
+    color:#1A4D8F;
+}
+#swap-style .loading-indicator { 
+    font-size:11px; 
+    background-image:url('../../extjs/resources/images/grid/loading.gif'); 
+    background-repeat: no-repeat; 
+    background-position: left; 
+    padding-left:20px; 
+    margin:10px; 
+} 
+
+
+/*Add Art panel*/
+#add-art{ 
+    background: white; 
+    font: 11px Arial, Helvetica, sans-serif;
+} 
+#add-art .art{ 
+    /*background: #dddddd; */
+    padding: 3px; 
+} 
+#add-art .art img{ 
+    height: 36px; 
+    width: 36px; 
+} 
+#add-art .art-wrap{ 
+    float: left; 
+    margin: 4px; 
+    margin-right: 0; 
+    padding: 5px;
+} 
+#add-art .art-wrap span{ 
+    display: block; 
+    overflow: hidden; 
+    text-align: center; 
+} 
+#add-art .x-view-over{
+    border:1px solid #DCDCDC; 
+    background: #EFEFEF url(../../extjs/resources/images/default/grid/row-over.gif) repeat-x left top; 
+    padding: 4px; 
+}
+#add-art .x-view-selected{ 
+    background: #DFEDFF; 
+    border: 1px solid #6593cf; 
+    padding: 4px; 
+} 
+#add-art .x-view-selected .art{ 
+    background:transparent; 
+}
+#add-art .x-view-selected span{ 
+    color:#1A4D8F;
+}
+#add-art .loading-indicator { 
+    font-size:11px; 
+    background-image:url('../../extjs/resources/images/grid/loading.gif'); 
+    background-repeat: no-repeat; 
+    background-position: left; 
+    padding-left:20px; 
+    margin:10px; 
+} 
+
+/*Main editting panel*/
+.style-img {
+}
+.border-table td  {
+	/*border: 1px #8DB2E3 solid;*/
+}
+.front, .back{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+

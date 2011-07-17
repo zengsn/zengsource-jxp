@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>customer</id>
+	<index>6</index>
+	<status>2</status>
+	<name>客户管理</name>
+	<menus>
+		<menu type="admin" id="customer-admin">
+			<item>
+				<id>customer-config</id>
+				<name>基本设置</name>
+				<icon>config.gif</icon>
+				<href>customer-config.htm</href>
+				<index>1</index>
+			</item>
+		</menu>
+	</menus>
+</module>

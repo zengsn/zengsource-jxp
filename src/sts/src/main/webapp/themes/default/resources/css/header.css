@@ -1,0 +1,83 @@
+
+/**/
+#hd-top {
+	color: #fff;
+	height: 24px;
+	padding: 3px;
+	font-size: 12px;
+	text-align: left;
+	background: #DC143C;
+	margin-bottom: 8px;
+}
+#hd-top #search {
+	margin:auto;
+	min-width:1000px;
+	text-align:left;
+	width: 1000px;
+}
+
+/**/
+#hd-inner {
+	margin:auto;
+	min-width:1000px;
+	text-align:left;
+	width: 1000px;
+}
+#hd-inner #logo {
+	padding-top: 5px;
+}
+#hd-inner #logo a{
+	height: 64px;
+	width: 256px;
+	float: left;
+	background: url(../images/seaturtletech.gif) no-repeat;
+}
+#hd-inner #logo a span {
+	display: none;
+}
+#hd-inner #navi {
+	float: right;
+	margin-top: 48px;
+	font-size: 13px;
+	background: #FFF;
+	font-weight: bold;
+}
+#hd-inner #navi ul {
+	list-style: none;
+	list-style-type: none;
+	margin:0px;
+	float: left;
+}
+#hd-inner #navi ul li{ 
+	width:80px; 
+	float:left; 
+}
+#hd-inner #navi ul li a{ 
+	width: 100%; 
+	height: 24px;
+	display:block; 
+	padding-top: 3px;
+	text-align: center;
+	text-decoration: none;
+	border-top: 3px #9CAE63 solid;
+}
+#hd-inner #navi ul li a:hover{ 
+	/*color: White;
+	background:#9CAE63; */
+	border-top: 3px #FFD700 solid;
+	text-decoration: underline;
+}
+#hd-inner #navi ul li a.selected {
+	/*color: White;
+	background:#9CAE63; */
+	border-top: 3px Red solid;
+}
+
+/**/
+#hd-bottom {
+	color: #fff;
+	height: 16px;
+	padding: 3px;
+	background: #9CAE63;
+	border: 1px #BDB76B solid;
+}

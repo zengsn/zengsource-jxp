@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>report</id>
+	<index>7</index>
+	<status>2</status>
+	<name>统计报表</name>
+	<menus>
+		<menu type="admin" id="report-admin">
+			<item>
+				<id>report-config</id>
+				<name>基本设置</name>
+				<icon>config.gif</icon>
+				<href>report-config.htm</href>
+				<index>1</index>
+			</item>
+		</menu>
+	</menus>
+</module>

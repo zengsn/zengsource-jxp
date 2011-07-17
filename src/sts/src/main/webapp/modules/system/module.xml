@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>system</id>
+	<index>1</index>
+	<name>系统管理</name>
+	<menus>
+		<menu type="admin" id="system-admin">
+			<item>
+				<id>system-config</id>
+				<name>系统设置</name>
+				<icon>config.gif</icon>
+				<href>system-config.htm</href>
+				<index>1</index>
+			</item>
+			<item>
+				<id>system-module</id>
+				<name>模块管理</name>
+				<icon>module.gif</icon>
+				<href>system-module.htm</href>
+				<index>2</index>
+			</item>
+			<item>
+				<id>system-block</id>
+				<name>区块管理</name>
+				<icon>module.gif</icon>
+				<href>system-block.htm</href>
+				<index>3</index>
+			</item>
+			<item>
+				<id>system-page</id>
+				<name>页面管理</name>
+				<icon>module.gif</icon>
+				<href>system-page.htm</href>
+				<index>4</index>
+			</item>
+			<item>
+				<id>system-theme</id>
+				<name>主题管理</name>
+				<icon>module.gif</icon>
+				<href>system-theme.htm</href>
+				<index>5</index>
+			</item>
+			<item>
+				<id>system-acl</id>
+				<name>ACL配置</name>
+				<icon>module.gif</icon>
+				<href>system-acl.htm</href>
+				<index>6</index>
+			</item>
+			<item>
+				<id>system-user</id>
+				<name>用户管理</name>
+				<icon>module.gif</icon>
+				<href>system-user.htm</href>
+				<index>7</index>
+			</item>
+			<item>
+				<id>system-backup</id>
+				<name>数据备份</name>
+				<icon>module.gif</icon>
+				<href>system-backup.htm</href>
+				<index>8</index>
+			</item>
+			<!-- 
+			<menu name="子菜单" index="1">
+				<item>
+					<id>submenu</id>
+					<name>条目一</name>
+					<icon>home.gif</icon>
+					<href>/system/item-1</href>
+				</item>
+			</menu>
+			 -->
+		</menu>
+	</menus>
+	<icons>
+		<icon id="16*16">/modules/system/resources/images/system_16_16.gif</icon>
+		<icon id="32*32">/modules/system/resources/images/system_32_32.gif</icon>
+		<icon id="64*64">/modules/system/resources/images/system_64_64.gif</icon>
+		<icon id="128*128">/modules/system/resources/images/system_128_128.gif</icon>
+	</icons>
+	<configs>
+		<config>
+			<key>cache.mode</key>
+			<name>缓存模式</name>
+			<value>memory</value>
+			<description></description>
+		</config>
+		<config>
+			<key>site.index</key>
+			<name>网站首页</name>
+			<value></value>
+			<description></description>
+		</config>
+		<config>
+			<key>site.name</key>
+			<name>网站名称</name>
+			<value>Java Ext Site</value>
+			<description></description>
+		</config>
+		<config>
+			<key>site.theme</key>
+			<name>网站主题</name>
+			<value>default</value>
+			<description></description>
+		</config>
+	</configs>
+	<pages>
+		<page>
+			<id>index</id>
+			<name>首页</name>
+			<url>/index</url>
+			<description>网站首页...</description>
+		</page>
+	</pages>
+</module>

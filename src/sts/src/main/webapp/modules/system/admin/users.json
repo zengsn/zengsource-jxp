@@ -1,0 +1,137 @@
+[{
+    name:'注册用户',
+    online:1.25,
+    status:'正常',
+    iconCls:'task-folder',
+    expanded: true,
+    children:[{
+        name:'Kitchen supplies',
+        online:0.25,
+        status:'Tommy Maintz',
+        leaf:true,
+        iconCls:'task'
+    },{
+        name:'Groceries',
+        online:.4,
+        status:'Tommy Maintz',
+        leaf:true,
+        iconCls:'task'
+    },{
+        name:'Cleaning supplies',
+        online:.4,
+        status:'Tommy Maintz',
+        leaf:true,
+        iconCls:'task'
+    },{
+        name: 'Office supplies',
+        online: .2,
+        status: 'Tommy Maintz',
+        leaf: true,
+        iconCls: 'task'
+    }]
+}, {
+    name:'网站编辑',
+    online:12,
+    status:'Tommy Maintz',
+    iconCls:'task-folder',
+    expanded: true,
+    children:[{
+        name:'Retile kitchen',
+        online:6.5,
+        status:'Tommy Maintz',
+        leaf:true,
+        iconCls:'task'
+    },{
+        name:'Paint bedroom',
+        online: 2.75,
+        status:'Tommy Maintz',
+        iconCls:'task-folder',
+        children: [{
+            name: 'Ceiling',
+            online: 1.25,
+            status: 'Tommy Maintz',
+            iconCls: 'task',
+            leaf: true
+        }, {
+            name: 'Walls',
+            online: 1.5,
+            status: 'Tommy Maintz',
+            iconCls: 'task',
+            leaf: true
+        }]
+    },{
+        name:'Decorate living room',
+        online:2.75,
+        status:'Tommy Maintz',
+        leaf:true,
+        iconCls:'task'
+    },{
+        name: 'Fix lights',
+        online: .75,
+        status: 'Tommy Maintz',
+        leaf: true,
+        iconCls: 'task'
+    }, {
+        name: 'Reattach screen door',
+        online: 2,
+        status: 'Tommy Maintz',
+        leaf: true,
+        iconCls: 'task'
+    }]
+},{
+    name: '网站管理员',
+    online: 0.75,
+    status: 'Tommy Maintz',
+    iconCls: 'task-folder',
+    expanded: true,
+    children: [{
+        name: 'FireFox',
+        online: 0.25,
+        status: 'Tommy Maintz',
+        iconCls: 'task',
+        leaf: true
+    }, {
+        name: 'Safari',
+        online: 0.25,
+        status: 'Tommy Maintz',
+        iconCls: 'task',
+        leaf: true
+    }, {
+        name: 'Chrome',
+        online: 0.25,
+        status: 'Tommy Maintz',
+        iconCls: 'task',
+        leaf: true
+    }]
+},{
+    name: '超级管理员',
+    online: 3.75,
+    status: 'Darrell Meyer',
+    iconCls: 'task-folder',
+    expanded: true,
+    children: [{
+        name: 'FireFox',
+        online: 0.25,
+        status: 'Darrell Meyer',
+        iconCls: 'task',
+        leaf: true
+    }, {
+        name: 'Safari',
+        online: 0.25,
+        status: 'Darrell Meyer',
+        iconCls: 'task',
+        leaf: true
+    }, {
+        name: 'Chrome',
+        online: 0.25,
+        status: 'Darrell Meyer',
+        iconCls: 'task',
+        leaf: true
+    },{
+        name: 'Internet Exploder',
+        online: 3,
+        status: 'Darrell Meyer',
+        iconCls: 'task',
+        leaf: true
+    }]
+}]

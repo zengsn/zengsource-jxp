@@ -1,0 +1,26 @@
+/* White Box */
+.x-box-white .x-box-bl, .x-box-white .x-box-br, .x-box-white .x-box-tl, .x-box-white .x-box-tr {
+	background-image: url(../images/corners-white.gif);
+}
+
+.x-box-white .x-box-bc, .x-box-white .x-box-mc, .x-box-white .x-box-tc {
+	background-image: url(../images/tb-white.gif);
+}
+
+.x-box-white .x-box-mc {
+	background-color: White;
+}
+
+.x-box-white .x-box-mc h3 {
+	color: #17385b;
+}
+
+.x-box-white .x-box-ml {
+	background-image: url(../images/l-white.gif);
+}
+
+.x-box-white .x-box-mr {
+	background-image: url(../images/r-white.gif);
+}
+
+

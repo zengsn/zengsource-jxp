@@ -1,0 +1,75 @@
+/* White Box */
+.x-box-white .x-box-bl, .x-box-white .x-box-br, .x-box-white .x-box-tl, .x-box-white .x-box-tr {
+	background-image: url(../images/corners-white.gif);
+}
+
+.x-box-white .x-box-bc, .x-box-white .x-box-mc, .x-box-white .x-box-tc {
+	background-image: url(../images/tb-white.gif);
+}
+
+.x-box-white .x-box-mc {
+	background-color: White;
+}
+
+.x-box-white .x-box-mc h3 {
+	color: #17385b;
+}
+
+.x-box-white .x-box-ml {
+	background-image: url(../images/l-white.gif);
+}
+
+.x-box-white .x-box-mr {
+	background-image: url(../images/r-white.gif);
+}
+
+/* Gray Box */
+.x-box-gray .x-box-bl, .x-box-gray .x-box-br, .x-box-gray .x-box-tl, .x-box-gray .x-box-tr {
+	background-image: url(../images/corners-gray.gif);
+}
+
+.x-box-gray .x-box-bc, .x-box-gray .x-box-mc, .x-box-gray .x-box-tc {
+	background-image: url(../images/tb-gray.gif);
+}
+
+.x-box-gray .x-box-mc {
+	background-color: #eeeeee;
+}
+
+.x-box-gray .x-box-mc h3 {
+	color: #17385b;
+}
+
+.x-box-gray .x-box-ml {
+	background-image: url(../images/l-gray.gif);
+}
+
+.x-box-gray .x-box-mr {
+	background-image: url(../images/r-gray.gif);
+}
+
+/* Steel Blue */
+.x-box-steelblue .x-box-bl, .x-box-steelblue .x-box-br, .x-box-steelblue .x-box-tl, .x-box-steelblue .x-box-tr {
+	background-image: url(../images/corners-steelblue.gif);
+}
+
+.x-box-steelblue .x-box-bc, .x-box-steelblue .x-box-mc, .x-box-steelblue .x-box-tc {
+	background-image: url(../images/tb-steelblue.gif);
+}
+
+.x-box-steelblue .x-box-mc {
+	background-color: #4682B4;
+	/*#0081C2*/
+}
+
+.x-box-steelblue .x-box-mc h3 {
+	color: #ffffff;
+}
+
+.x-box-steelblue .x-box-ml {
+	background-image: url(../images/l-steelblue.gif);
+}
+
+.x-box-steelblue .x-box-mr {
+	background-image: url(../images/r-steelblue.gif);
+}

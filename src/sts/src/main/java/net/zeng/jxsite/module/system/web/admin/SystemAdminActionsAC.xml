@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="admin.index" class="net.zeng.jxsite.module.system.web.admin.IndexAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminIndex</value>
+		</property>
+		<property name="forward">
+			<value>/modules/system/admin/index.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="admin.main" class="net.zeng.jxsite.module.system.web.admin.MainAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminMain</value>
+		</property>
+		<property name="forward">
+			<value>/modules/system/admin/main.jsp</value>
+		</property>
+		<property name="moduleService">
+			<ref bean="moduleService" />
+		</property>
+	</bean>
+
+	<bean id="admin.system.login" class="net.zeng.jxsite.module.system.web.admin.LoginAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>ViewHomePage</value>
+		</property>
+	</bean>
+
+	<bean id="admin.system.tree" class="net.zeng.jxsite.module.system.web.admin.TreeAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminTree</value>
+		</property>
+		<property name="moduleService">
+			<ref bean="moduleService" />
+		</property>
+	</bean>
+
+	<bean id="admin.system.module" class="net.zeng.jxsite.module.system.web.admin.ModuleAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminModule</value>
+		</property>
+		<property name="moduleService">
+			<ref bean="moduleService" />
+		</property>
+	</bean>
+
+	<bean id="admin.system.config" class="net.zeng.jxsite.module.system.web.admin.ConfigAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminConfig</value>
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService" />
+		</property>
+	</bean>
+
+	<bean id="admin.system.block" class="net.zeng.jxsite.module.system.web.admin.BlockAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminBlock</value>
+		</property>
+		<property name="moduleService">
+			<ref bean="moduleService" />
+		</property>
+		<property name="blockPrototypeService">
+			<ref bean="blockPrototypeService" />
+		</property>
+		<property name="blockInstanceService">
+			<ref bean="blockInstanceService" />
+		</property>
+		<property name="pageService">
+			<ref bean="pageService" />
+		</property>
+	</bean>
+
+	<bean id="admin.system.page" class="net.zeng.jxsite.module.system.web.admin.PageAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminPage</value>
+		</property>
+		<property name="blockPrototypeService">
+			<ref bean="blockPrototypeService" />
+		</property>
+		<property name="blockInstanceService">
+			<ref bean="blockInstanceService" />
+		</property>
+		<property name="pageService">
+			<ref bean="pageService" />
+		</property>
+	</bean>
+
+	<bean id="admin.system.theme" class="net.zeng.jxsite.module.system.web.admin.ThemeAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminTheme</value>
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService" />
+		</property>
+		<property name="themeService">
+			<ref bean="themeService" />
+		</property>
+	</bean>
+
+	<bean id="admin.system.user" class="net.zeng.jxsite.module.system.web.admin.UserAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminUser</value>
+		</property>
+		<property name="userInfoService">
+			<ref bean="userInfoService" />
+		</property>
+	</bean>
+
+	<bean id="admin.system.acl" class="net.zeng.jxsite.module.system.web.admin.AclAction"
+		scope="prototype">
+		<property name="actionName">
+			<value>AdminAcl</value>
+		</property>
+		<property name="roleService">
+			<ref bean="roleService" />
+		</property>
+		<property name="userInfoService">
+			<ref bean="userInfoService" />
+		</property>
+		<property name="aclClassService">
+			<ref bean="aclClassService" />
+		</property>
+		<property name="aclObjectService">
+			<ref bean="aclObjectService" />
+		</property>
+		<property name="aclEntryService">
+			<ref bean="aclEntryService" />
+		</property>
+	</bean>
+
+</beans>

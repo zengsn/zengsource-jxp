@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.system.model.Configuration"
+		table="configurations" lazy="true">
+		<id name="id" column="cfg_id"></id>
+		<property name="name" column="cfg_name" type="string" unique="true" />
+		<property name="key" column="cfg_key" type="string" unique="true" />
+		<property name="value" column="cfg_value" type="string" />
+		<property name="group" column="cfg_group" type="string" />
+		<property name="description" column="cfg_description" type="string" />
+		<property name="createdTime" column="cfg_createdtime" type="timestamp"
+			insert="true" update="false" />
+	</class>
+</hibernate-mapping>

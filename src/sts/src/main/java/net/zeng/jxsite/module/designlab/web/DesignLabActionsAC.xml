@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="designlab.index" class="net.zeng.jxsite.module.designlab.web.IndexAction" scope="prototype">
+		<property name="actionName">
+			<value>Design Lab Index</value>
+		</property>
+		<property name="forward">
+			<value>/modules/designlab/index.jsp</value>			
+		</property>
+	</bean>
+	<bean id="designlab.mydesign" class="net.zeng.mvc.action.GenericAction" scope="prototype">
+		<property name="actionName">
+			<value>My Design</value>
+		</property>
+		<property name="forward">
+			<value>/modules/designlab/mydesign.jsp</value>			
+		</property>
+	</bean>
+	
+	<bean id="designlab.customize" class="net.zeng.jxsite.module.designlab.web.CustomizeAction" scope="prototype">
+		<property name="actionName">
+			<value>Customize</value>
+		</property>
+		<property name="designService">
+			<ref bean="designService"/>
+		</property>
+		<property name="productService">
+			<ref bean="productService"/>
+		</property>
+		<property name="fontMetaService">
+			<ref bean="fontMetaService"/>
+		</property>
+		<property name="galleryImageService">
+			<ref bean="galleryImageService"/>
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService"/>
+		</property>
+	</bean>
+	
+	<bean id="designlab.uploadphoto" class="net.zeng.jxsite.module.designlab.web.UploadPhotoAction" scope="prototype">
+		<property name="actionName">
+			<value>Upload Photo</value>
+		</property>
+		<property name="moduleService">
+			<ref bean="moduleService"/>
+		</property>
+		<property name="galleryImageService">
+			<ref bean="galleryImageService"/>
+		</property>
+		<property name="galleryCatalogService">
+			<ref bean="galleryCatalogService"/>
+		</property>
+	</bean>
+
+	<import	resource="classpath:net/zeng/jxsite/module/designlab/web/admin/DesignLabAdminActionsAC.xml" />
+
+</beans>

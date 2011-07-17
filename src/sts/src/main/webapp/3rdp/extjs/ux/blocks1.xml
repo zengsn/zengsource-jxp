@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+	<totalCount>3</totalCount>
+	<block>
+		<id>1</id>
+		<name>block1</name>
+	</block>
+	<block>
+		<id>2</id>
+		<name>block2</name>
+	</block>
+	<block>
+		<id>3</id>
+		<name>block3</name>
+	</block>
+</response>

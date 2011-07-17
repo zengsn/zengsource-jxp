@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.system.model.Menu" table="menus" lazy="false">
+		<id name="id" column="mn_id"></id>
+		<property name="url" column="mn_url" type="string" />
+		<property name="name" column="mn_name" type="string" />
+		<property name="type" column="mn_type" type="string" />
+		<property name="icon" column="mn_icon" type="string" />
+		<property name="index" column="mn_index" type="int" />
+		
+		<!--  
+		<join table="modulemenus" inverse="true" optional="true">
+			<key column="mm_menuid" />
+			<many-to-one name="module" column="mm_moduleid" not-null="true" />
+		</join>
+		-->		
+		
+		<many-to-one name="module" column="mn_moduleid" not-null="true"
+			cascade="none" insert="true" update="true" lazy="false"/>
+
+		<many-to-one name="parent" column="mn_parentid" not-null="false"
+			cascade="none" insert="false" update="true" lazy="false"/>
+			
+		<!--
+		<list name="itemList" lazy="false" cascade="none">
+			<key column="mn_parentid" not-null="false" />
+			<list-index column="mn_index" />
+			<one-to-many class="net.zeng.jxsite.module.system.model.Menu"
+				not-found="ignore" />
+		</list>
+		-->		
+
+		<set name="children" lazy="false" inverse="true">
+			<key column="mn_parentid" not-null="true" />
+			<one-to-many class="net.zeng.jxsite.module.system.model.Menu"
+				not-found="ignore" />
+		</set>
+
+		<property name="createdTime" column="mn_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="mn_updatedtime" type="timestamp"
+			update="true" />
+	</class>
+</hibernate-mapping>

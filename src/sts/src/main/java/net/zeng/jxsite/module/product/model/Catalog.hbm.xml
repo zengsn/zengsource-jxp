@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.product.model.Catalog" table="productcatalogs" lazy="false">
+		<id name="id" column="cat_id"></id>
+		<property name="name" column="cat_name" type="string" />
+		<property name="index" column="cat_index" type="int" />
+		<property name="description" column="cat_description" type="string" />
+
+		<many-to-one name="parent" column="cat_parentid" not-null="false"
+			cascade="none" insert="true" update="true" />
+
+		<list name="children" lazy="false" cascade="none">
+			<key column="cat_parentid" not-null="false" />
+			<list-index column="cat_index" />
+			<one-to-many class="net.zeng.jxsite.module.product.model.Catalog"
+				not-found="ignore" />
+		</list>
+
+		<property name="createdTime" column="cat_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="cat_updatedtime" type="timestamp"
+			update="true" />
+	</class>
+</hibernate-mapping>

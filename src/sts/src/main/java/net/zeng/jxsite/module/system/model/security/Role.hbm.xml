@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.system.model.security.Role"
+		table="roles" lazy="false">
+		<id name="id" column="rid_"></id>
+		<property name="name" column="name_" type="string" />
+		<property name="isWrapper" column="iswrapper_" type="boolean" />
+		<property name="description" column="description_" type="string" />
+
+		<!-- permissons -->
+		<!-- users -->
+		<set name="users" table="roleslinkusers" cascade="save-update">
+			<key column="roleid_" />
+			<many-to-many column="userid_" lazy="false"
+				class="net.zeng.jxsite.module.system.model.security.User" />
+		</set>
+
+		<property name="userCount" column="usercount_" type="long" />
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+		<property name="updatedTime" column="updatedtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

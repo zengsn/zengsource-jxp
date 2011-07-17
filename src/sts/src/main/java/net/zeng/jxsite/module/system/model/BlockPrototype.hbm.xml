@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="net.zeng.jxsite.module.system.model.BlockPrototype"
+		table="blockprototypes" lazy="false">
+
+		<id name="id" column="bp_id" type="string"></id>
+		<property name="name" column="bp_name" type="string" />
+		<property name="type" column="bp_type" type="string" />
+		<property name="template" column="bp_template" type="string" />
+		<property name="pageUrl" column="bp_pageurl" type="string" />
+
+		<property name="html" column="bp_html" type="string" />
+		
+		<property name="singleton" column="bp_singleton" type="boolean" />
+		
+		<many-to-one name="module" column="bp_moduleid" not-null="true"
+			cascade="none" insert="true" update="true" lazy="false"/>
+			
+		<set name="settings" lazy="false" inverse="true">
+			<key column="bs_prototypeid" not-null="false" />
+			<one-to-many class="net.zeng.jxsite.module.system.model.BlockSetting"
+				not-found="ignore" />
+		</set>
+			
+		<!-- inverse="true" is important!!! -->
+		<set name="instances" lazy="false" inverse="true">
+			<key column="bi_prototypeid" not-null="false" />
+			<one-to-many class="net.zeng.jxsite.module.system.model.BlockInstance"
+				not-found="ignore" />
+		</set>
+
+		<property name="description" column="bp_description" type="string" /> 
+		<property name="createdTime" column="bp_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="bp_updatedtime" type="timestamp"
+			update="true" />
+
+	</class>
+
+</hibernate-mapping>

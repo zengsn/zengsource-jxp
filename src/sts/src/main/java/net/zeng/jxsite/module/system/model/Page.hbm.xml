@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.system.model.Page" table="pages"
+		lazy="false">
+		<id name="id" column="pg_id"></id>
+		<property name="name" column="pg_name" type="string" />
+		<property name="url" column="pg_url" type="string" />
+		<property name="cls" column="pg_cls" type="string" />
+		<property name="style" column="pg_style" type="string" />
+		<property name="columns" column="pg_columns" type="int" />
+		
+		<many-to-one name="defaultBlock" column="pg_defaultblockid" lazy="false"
+			not-null="false" cascade="none" insert="true" update="true" />
+		
+		<many-to-one name="module" column="pg_moduleid" lazy="false"
+			not-null="true" cascade="none" insert="true" update="false" />
+
+		<set name="blockInstances" lazy="false" cascade="none" table="pageblocks">
+			<key column="pb_pageid" not-null="true" />
+			<many-to-many class="net.zeng.jxsite.module.system.model.BlockInstance"
+				column="pb_blockid" not-found="exception" />
+		</set>
+
+		<property name="description" column="pg_description" type="string" />
+		<property name="createdTime" column="pg_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="pg_updatedtime" type="timestamp"
+			update="true" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>news</id>
+	<index>5</index>
+	<status>2</status>
+	<name>新闻动态</name>
+	<menus>
+		<menu type="admin">
+			<item>
+				<id>news-config</id>
+				<name>基本设置</name>
+				<icon>config.gif</icon>
+				<href>news-config.htm</href>
+				<index>1</index>
+			</item>
+			<item>
+				<id>news-manage</id>
+				<name>新闻管理</name>
+				<icon>module.gif</icon>
+				<href>news-module.htm</href>
+				<index>2</index>
+			</item>
+			<item>
+				<id>news-editor</id>
+				<name>新闻编辑</name>
+				<icon>module.gif</icon>
+				<href>news-editor.htm</href>
+				<index>3</index>
+			</item>
+			<item>
+				<id>news-comment</id>
+				<name>评论管理</name>
+				<icon>module.gif</icon>
+				<href>news-comment.htm</href>
+				<index>4</index>
+			</item>
+		</menu>
+	</menus>
+	<icons>
+		<icon id="16*16">/modules/markup/resources/images/system_16_16.gif</icon>
+		<icon id="32*32">/modules/markup/resources/images/system_32_32.gif</icon>
+		<icon id="64*64">/modules/markup/resources/images/system_64_64.gif</icon>
+		<icon id="128*128">/modules/markup/resources/images/system_128_128.gif</icon>
+	</icons>
+	<configs>
+	</configs>
+	<blocks>
+		<block id="news.news-latest">
+			<name>最新动态</name>
+			<type>dynamic</type>
+			<singleton>false</singleton>
+			<template>news-latest-block</template>
+			<description>Some comments ...</description>
+		</block>
+	</blocks>
+	<pages>
+		<page>
+			<id>news-entry</id>
+			<name>新闻查看</name>
+			<url>/modules/news/entry</url>
+			<!-- defaultBlock>product.product-list</defaultBlock-->
+			<description>查看新闻</description>
+		</page>
+	</pages>
+</module>

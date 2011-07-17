@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.icon-acl-role {
+	background-image: url(../../../../resources/icons/silk/png/folder_user.png) !important;
+}
+.icon-acl-role-users {
+	background-image: url(../../../../resources/icons/silk/png/user_add.png) !important;
+}
+.icon-acl-role-permissions {
+	background-image: url(../../../../resources/icons/silk/png/cog_add.png) !important;
+}
+.icon-acl-class {
+	background-image: url(../../../../resources/icons/silk/png/package.png) !important;
+}
+.icon-acl-object {
+	background-image: url(../../../../resources/icons/silk/png/note.png) !important;
+}
+.icon-acl-entry {
+	background-image: url(../../../../resources/icons/silk/png/cog.png) !important;
+}

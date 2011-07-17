@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.product.model.Product" table="products"
+		lazy="false">
+		<id name="id" column="pd_id"></id>
+		<property name="name" column="pd_name" type="string" />
+		<property name="manager" column="pd_manager" type="string" />
+		
+		<property name="status" column="pd_status" type="int" />
+		<property name="images" column="pd_images" type="int" />
+		
+		<property name="imageSingle" column="pd_imagesingle" type="string" />
+		<property name="imageFront" column="pd_imagefront" type="string" />
+		<property name="imageBack" column="pd_imageback" type="string" />
+		<property name="imageLeft" column="pd_imageleft" type="string" />
+		<property name="imageRight" column="pd_imageright" type="string" />
+		<property name="imageAbove" column="pd_imageabove" type="string" />
+		<property name="imageUnder" column="pd_imageunder" type="string" />
+		<property name="attachment" column="pd_attachment" type="string" />
+
+		<property name="price" column="pd_price" type="float" />
+		<property name="currency" column="pd_currency" type="string" />
+		<property name="material" column="pd_material" type="string" />
+		<property name="shipping" column="pd_shipping" type="string" />
+		<property name="usage" column="pd_usage" type="string" />
+
+		<many-to-one name="catalog" column="pd_catalogid"
+			not-null="false" cascade="none" insert="true" update="true"
+			class="net.zeng.jxsite.module.product.model.Catalog" />
+
+		<property name="viewCount" column="pd_viewcount" type="int" />
+		<property name="soldCount" column="pd_soldcount" type="int" />
+		<property name="totalCount" column="pd_totalcount" type="int" />
+		<property name="orderCount" column="pd_ordercount" type="int" />
+		
+		<property name="description" column="pd_description" type="string" />
+
+		<property name="createdTime" column="pd_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="pd_updatedtime" type="timestamp"
+			update="true" />
+	</class>
+</hibernate-mapping>

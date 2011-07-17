@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+	<totalCount>20</totalCount>
+	<object>
+		<id>123</id>
+		<name>/admin/index.jxp</name>
+		<description>后台管理登录页</description>
+		<class>net.zeng.jxsite.module.system.model.Page</class>
+		<owner>普通用户</owner>
+	</object>
+</response>

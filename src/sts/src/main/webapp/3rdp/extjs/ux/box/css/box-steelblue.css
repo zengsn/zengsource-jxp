@@ -1,0 +1,26 @@
+
+/* Steel Blue */
+.x-box-steelblue .x-box-bl, .x-box-steelblue .x-box-br, .x-box-steelblue .x-box-tl, .x-box-steelblue .x-box-tr {
+	background-image: url(../images/corners-steelblue.gif);
+}
+
+.x-box-steelblue .x-box-bc, .x-box-steelblue .x-box-mc, .x-box-steelblue .x-box-tc {
+	background-image: url(../images/tb-steelblue.gif);
+}
+
+.x-box-steelblue .x-box-mc {
+	background-color: #4682B4;
+	/*#0081C2*/
+}
+
+.x-box-steelblue .x-box-mc h3 {
+	color: #ffffff;
+}
+
+.x-box-steelblue .x-box-ml {
+	background-image: url(../images/l-steelblue.gif);
+}
+
+.x-box-steelblue .x-box-mr {
+	background-image: url(../images/r-steelblue.gif);
+}

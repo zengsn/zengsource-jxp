@@ -1,0 +1,42 @@
+* {
+	margin:0px;
+	padding:0px;
+}
+body {
+    font-size:12px;
+    text-align:center;
+    font-family:'lucida grande',tahoma,arial,sans-serif;
+	 background: #464646 url(../images/bg_bodyX.jpg) repeat-x;
+}
+hr {
+	size: 1px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+a {
+	/*color: #333366;*/
+	color: #15428B;
+}
+#doc {
+	margin:auto;
+	min-width:1000px;
+	text-align:left;
+	width: 1000px;
+	background: #fff;
+	border: 1px #FFF solid;
+}
+#hd {
+	margin-bottom: 1px;
+	background: #F5F5F5;
+}
+#bd {
+	background: #4E79B2;
+	/*#BDDDE8*/
+}
+#ft {
+	clear:both;
+	padding: 8px;
+	margin-top: 1px;
+	text-align: center;
+	background: #DAA520;
+}

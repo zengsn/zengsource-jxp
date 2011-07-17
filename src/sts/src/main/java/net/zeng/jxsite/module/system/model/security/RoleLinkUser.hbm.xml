@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.system.model.security.RoleLinkUser"
+		table="roleslinkusers" lazy="false">
+		<id name="id" column="lid_"></id>
+
+		<property name="index" column="index_" type="int" />
+		<property name="userId" column="userid_" type="string" />
+		<property name="roleId" column="roleid_" type="string" />
+
+		<property name="createdTime" column="createdtime_" type="timestamp" />
+
+	</class>
+</hibernate-mapping>

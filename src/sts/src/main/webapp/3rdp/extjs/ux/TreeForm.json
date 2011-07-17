@@ -1,0 +1,46 @@
+[{
+  id:'system',
+  text:'系统管理',
+  expanded:true,
+  children:[{
+    id:'system-config',
+    text:'系统设置',
+    leaf:true,
+    href:'system-config.htm'
+  },{
+    id:'system-module',
+    text:'模块管理',
+    leaf:true,
+    href:'system-module.htm'
+  },{
+    id:'20081006104711815',
+    text:'子菜单',
+    leaf:false,
+    children:[{
+      id:'submenu',
+      text:'条目一',
+      leaf:true,
+      href:'/system/item-1'
+    }]
+  }]
+},{
+  id:'product',
+  text:'产品管理',
+  expanded:false,
+  children:[{
+    id:'product-config',
+    text:'基本设置',
+    leaf:true,
+    href:'product-config.htm'
+  },{
+    id:'product-catalog',
+    text:'产品目录',
+    leaf:true,
+    href:'product-catalog.htm'
+  },{
+    id:'product-storehouse',
+    text:'产品仓库',
+    leaf:true,
+    href:'product-storehouse.htm'
+  }]
+}]

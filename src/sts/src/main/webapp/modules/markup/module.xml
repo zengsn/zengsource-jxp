@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>markup</id>
+	<index>4</index>
+	<status>2</status>
+	<name>静态内容</name>
+	<menus>
+		<menu type="admin">
+			<item>
+				<id>markup-config</id>
+				<name>基本设置</name>
+				<icon>config.gif</icon>
+				<href>markup-config.htm</href>
+				<index>1</index>
+			</item>
+			<item>
+				<id>markup-manage</id>
+				<name>内容管理</name>
+				<icon>module.gif</icon>
+				<href>system-module.htm</href>
+				<index>2</index>
+			</item>
+		</menu>
+	</menus>
+	<icons>
+		<icon id="16*16">/modules/markup/resources/images/system_16_16.gif</icon>
+		<icon id="32*32">/modules/markup/resources/images/system_32_32.gif</icon>
+		<icon id="64*64">/modules/markup/resources/images/system_64_64.gif</icon>
+		<icon id="128*128">/modules/markup/resources/images/system_128_128.gif</icon>
+	</icons>
+	<configs>
+	</configs>
+	<blocks>
+		<block id="markup.markup-static">
+			<name>静态文字</name>
+			<type>static</type>
+			<singleton>false</singleton>
+			<template>markup-static-block</template>
+			<description>Some comments ...</description>
+		</block>
+		<block id="markup.markup-dynamic">
+			<name>静态页面</name>
+			<type>dynamic</type>
+			<singleton>false</singleton>
+			<template>markup-dynamic-block</template>
+			<description>Some comments ...</description>
+			<!-- settings>
+				<setting>
+					<key>catalog</key>
+					<name>列表分类</name>
+					<value>all</value>
+					<usage>设置显示的产品列表所属分类.</usage>
+				</setting>
+			</settings-->
+		</block>
+	</blocks>
+	<pages>
+	</pages>
+</module>

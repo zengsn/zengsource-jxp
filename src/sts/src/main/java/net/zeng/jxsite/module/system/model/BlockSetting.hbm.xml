@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="net.zeng.jxsite.module.system.model.BlockSetting"
+		table="blocksettings">
+
+		<id name="id" column="bs_id" />
+		<property name="key" column="bs_key" type="string" />
+		<property name="name" column="bs_name" type="string" />
+		<property name="value" column="bs_value" type="string" />
+		<property name="usage" column="bs_usage" type="string" />
+
+		<many-to-one name="prototype" column="bs_prototypeid"
+			not-null="false" cascade="none" insert="true" update="false" />
+
+		<many-to-one name="instance" column="bs_instanceid"
+			not-null="false" cascade="none" insert="true" update="false" />
+
+		<property name="createdTime" column="bs_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="bs_updatedtime" type="timestamp"
+			update="true" />
+
+	</class>
+
+</hibernate-mapping>

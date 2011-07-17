@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	<!-- Admin Tiles -->
+	<definition name="system-welcome" template="/modules/system/admin/welcome.jsp"></definition>
+	<definition name="system-config" template="/modules/system/admin/config.jsp"></definition>
+	<definition name="system-module" template="/modules/system/admin/module.jsp"></definition>
+	<definition name="system-block" template="/modules/system/admin/block.jsp"></definition>
+	<definition name="system-page" template="/modules/system/admin/page.jsp"></definition>
+	<definition name="system-theme" template="/modules/system/admin/theme.jsp"></definition>
+	<definition name="system-acl" template="/modules/system/admin/acl.jsp"></definition>
+	<definition name="system-user" template="/modules/system/admin/user.jsp"></definition>
+	<definition name="system-backup" template="/modules/system/admin/backup.jsp"></definition>
+	
+	<definition name="submenu" template="/modules/system/admin/submenu.jsp"></definition>
+
+	<definition name="system-login-block" template="/modules/system/blocks/login.jsp"></definition>
+	
+
+</tiles-definitions>

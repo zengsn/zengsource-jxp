@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="net.zeng.jxsite.module.system.model.BlockPrototype"
+		table="blocks" lazy="false">
+
+		<id name="id" column="bl_id"></id>
+		<property name="name" column="bl_name" type="string" />
+		<property name="type" column="bl_type" type="string" />
+		<property name="style" column="bl_style" type="string" />
+		<property name="template" column="bl_template" type="string" />
+		<property name="colspan" column="bl_colspan" type="int" />
+		<property name="rowspan" column="bl_rowspan" type="int" />
+
+		<property name="html" column="bl_html" type="string" />
+		
+		<many-to-one name="module" column="bl_moduleid" not-null="false"
+			cascade="none" insert="false" update="false" />
+
+		<property name="description" column="bl_description" type="string" /> 
+		<property name="createdTime" column="bl_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="bl_updatedtime" type="timestamp"
+			update="true" />
+
+	</class>
+
+	<joined-subclass name="net.zeng.jxsite.module.system.model.BlockInstance"
+		extends="net.zeng.jxsite.module.system.model.BlockPrototype">
+
+		<key column="bl_id" />
+		
+		<property name="index" column="bl_index" type="int" />
+
+		<many-to-one name="prototype" column="bl_prototypeid"
+			not-null="false" cascade="none" insert="false" update="false" />
+
+		<list name="targetPages" lazy="false" cascade="none" table="pageblocks">
+			<key column="pb_blockid" not-null="false" />
+			<list-index column="pb_index" />
+			<many-to-many column="pb_pageid"
+				class="net.zeng.jxsite.module.system.model.Page" not-found="ignore" />
+		</list>
+
+	</joined-subclass>
+
+</hibernate-mapping>

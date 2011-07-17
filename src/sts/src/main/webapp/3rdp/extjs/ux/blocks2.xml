@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+	<totalCount>3</totalCount>
+	<block>
+		<id>2</id>
+		<name>block2</name>
+	</block>
+</response>

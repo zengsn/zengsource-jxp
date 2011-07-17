@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- Modules -->
+	<import resource="classpath:net/zeng/jxsite/module/system/SystemModuleAC.xml" />
+	<import resource="classpath:net/zeng/jxsite/module/product/ProductModuleAC.xml" />
+	<!-- import resource="classpath:net/zeng/jxsite/module/designlab/DesignLabModuleAC.xml" /-->
+	<import resource="classpath:net/zeng/jxsite/module/markup/MarkupModuleAC.xml" />
+	<import resource="classpath:net/zeng/jxsite/module/news/NewsModuleAC.xml" />
+	
+	<!-- Web actions of different modules based on ModuleService -->
+	<import resource="classpath:net/zeng/jxsite/module/system/web/SystemActionsAC.xml"/>
+	<import resource="classpath:net/zeng/jxsite/module/product/web/ProductActionsAC.xml"/>
+	<!-- import resource="classpath:net/zeng/jxsite/module/designlab/web/DesignLabActionsAC.xml"/-->
+	<import resource="classpath:net/zeng/jxsite/module/news/web/NewsActionsAC.xml"/>
+
+</beans>

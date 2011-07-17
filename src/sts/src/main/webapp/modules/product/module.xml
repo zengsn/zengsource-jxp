@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>product</id>
+	<index>2</index>
+	<status>2</status>
+	<name>产品管理</name>
+	<menus>
+		<menu type="admin">
+			<item>
+				<id>product-config</id>
+				<name>基本设置</name>
+				<icon>config.gif</icon>
+				<href>product-config.htm</href>
+				<index>1</index>
+			</item>
+			<!-- 
+			<item>
+				<id>product-catalog</id>
+				<name>产品目录</name>
+				<icon>module.gif</icon>
+				<href>product-catalog.htm</href>
+				<index>2</index>
+			</item>
+			<item>
+				<id>product-storehouse</id>
+				<name>产品仓库</name>
+				<icon>module.gif</icon>
+				<href>product-storehouse.htm</href>
+				<index>3</index>
+			</item>
+			 -->
+			<item>
+				<id>product-browser</id>
+				<name>产品浏览</name>
+				<icon>module.gif</icon>
+				<href>product-browser.htm</href>
+				<index>2</index>
+			</item>
+			<item>
+				<id>product-editor</id>
+				<name>产品编辑</name>
+				<icon>module.gif</icon>
+				<href>product-editor.htm</href>
+				<index>3</index>
+			</item>
+		</menu>
+	</menus>
+	<configs>
+		<config>
+			<key>test-pro</key>
+			<name>测试产品模块</name>
+			<value>test..</value>
+			<description></description>
+		</config>
+	</configs>
+	<blocks>
+		<block id="product.product-list">
+			<name>产品列表</name>
+			<type>dynamic</type>
+			<template>product-list-block</template>
+			<description>Some comments ...</description>
+			<settings>
+				<setting>
+					<key>catalog</key>
+					<name>列表分类</name>
+					<value>all</value>
+					<usage>设置显示的产品列表所属分类.</usage>
+				</setting>
+			</settings>
+		</block>
+		<block id="product.product-list2">
+			<name>产品列表2</name>
+			<type>dynamic</type>
+			<template>product-list2-block</template>
+			<description>Some comments ...</description>
+		</block>
+		<block id="product.product-view">
+			<name>产品浏览</name>
+			<type>dynamic</type>
+			<template>product-view-block</template>
+			<description>Some comments ...</description>
+			<settings>
+				<setting>
+					<key>catalog</key>
+					<name>列表分类</name>
+					<value>all</value>
+					<usage>设置显示的产品列表所属分类.</usage>
+				</setting>
+			</settings>
+		</block>
+	</blocks>
+	<pages>
+		<page>
+			<id>product-index</id>
+			<name>产品中心</name>
+			<url>/modules/product/index</url>
+			<!-- defaultBlock>product.product-list</defaultBlock-->
+			<description>产品模块首页...</description>
+		</page>
+	</pages>
+</module>

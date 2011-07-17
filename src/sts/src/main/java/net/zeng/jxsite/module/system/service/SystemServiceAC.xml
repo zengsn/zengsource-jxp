@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+			
+	<bean id="configurationService" class="net.zeng.jxsite.module.system.service.ConfigurationServiceImpl">
+		<property name="cacheService">
+			<ref bean="cacheService" />
+		</property>
+		<property name="configurationDao">
+			<ref bean="configurationDao" />
+		</property>
+	</bean>	
+	
+	<bean id="blockPrototypeService" class="net.zeng.jxsite.module.system.service.BlockPrototypeServiceImpl">
+		<property name="blockPrototypeDao">
+			<ref bean="blockPrototypeDao" />
+		</property>
+		<property name="blockSettingDao">
+			<ref bean="blockSettingDao"/>
+		</property>
+	</bean>
+	
+	<bean id="blockInstanceService" class="net.zeng.jxsite.module.system.service.BlockInstanceServiceImpl">
+		<property name="pageDao">
+			<ref bean="pageDao" />
+		</property>
+		<property name="blockInstanceDao">
+			<ref bean="blockInstanceDao" />
+		</property>
+		<property name="blockSettingDao">
+			<ref bean="blockSettingDao"/>
+		</property>
+	</bean>
+	
+	<bean id="pageService" class="net.zeng.jxsite.module.system.service.PageServiceImpl">
+		<property name="pageDao">
+			<ref bean="pageDao" />
+		</property>
+		<property name="blockInstanceService">
+			<ref bean="blockInstanceService" />
+		</property>
+		<property name="blockPrototypeService">
+			<ref bean="blockPrototypeService" />
+		</property>
+	</bean>
+
+	<!-- Module Service :: Register new module here before load it !!! -->
+	<bean id="moduleService" class="net.zeng.jxsite.module.system.service.ModuleServiceImpl">
+		<property name="menuDao">
+			<ref bean="menuDao" />
+		</property>
+		<property name="moduleDao">
+			<ref bean="moduleDao" />
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService"/>
+		</property>
+		<property name="blockPrototypeService">
+			<ref bean="blockPrototypeService"/>
+		</property>
+		<property name="pageService">
+			<ref bean="pageService"/>
+		</property>
+	</bean>
+	
+	<bean id="themeService" class="net.zeng.jxsite.module.system.service.ThemeServiceImpl">
+	</bean>
+	
+	<bean id="userInfoService" class="net.zeng.jxsite.module.system.service.UserInfoServiceImpl">
+		<property name="userInfoDao">
+			<ref bean="userInfoDao"/>
+		</property>
+		<property name="roleLinkUserDao">
+			<ref bean="roleLinkUserDao"/>
+		</property>
+		<property name="configurationService">
+			<ref bean="configurationService"/>
+		</property>
+	</bean>
+	
+	<bean id="roleService" class="net.zeng.jxsite.module.system.service.RoleServiceImpl">
+		<property name="roleDao">
+			<ref bean="roleDao"/>
+		</property>
+		<property name="roleLinkUserDao">
+			<ref bean="roleLinkUserDao"/>
+		</property>
+	</bean>
+	
+	<bean id="aclClassService" class="net.zeng.jxsite.module.system.service.AclClassServiceImpl">
+		<property name="aclClassDao">
+			<ref bean="aclClassDao"/>
+		</property>
+	</bean>
+	
+	<bean id="aclObjectService" class="net.zeng.jxsite.module.system.service.AclObjectServiceImpl">
+		<property name="aclObjectDao">
+			<ref bean="aclObjectDao"/>
+		</property>
+	</bean>
+	
+	<bean id="aclEntryService" class="net.zeng.jxsite.module.system.service.AclEntryServiceImpl">
+		<property name="aclEntryDao">
+			<ref bean="aclEntryDao"/>
+		</property>
+	</bean>
+
+</beans>

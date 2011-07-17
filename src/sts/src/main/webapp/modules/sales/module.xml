@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>sales</id>
+	<index>3</index>
+	<status>2</status>
+	<name>销售管理</name>
+	<menus>
+		<menu type="admin" id="sales-admin">
+			<item>
+				<id>sales-config</id>
+				<name>基本设置</name>
+				<icon>config.gif</icon>
+				<href>sales-config.htm</href>
+				<index>1</index>
+			</item>
+			<item>
+				<id>sales-order</id>
+				<name>订单管理</name>
+				<icon>module.gif</icon>
+				<href>sales-order.htm</href>
+				<index>2</index>
+			</item>
+			<item>
+				<id>sales-shipment</id>
+				<name>配送管理</name>
+				<icon>module.gif</icon>
+				<href>sales-shipment.htm</href>
+				<index>3</index>
+			</item>
+		</menu>
+	</menus>
+</module>

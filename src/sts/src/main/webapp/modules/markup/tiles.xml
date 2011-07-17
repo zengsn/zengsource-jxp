@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	<!-- Admin Tiles -->
+	<definition name="markup-config" template="/modules/markup/admin/config.jsp"></definition>
+	<definition name="markup-manage" template="/modules/markup/admin/manage.jsp"></definition>
+
+	<definition name="markup-dynamic-block" template="/modules/markup/blocks/dynamic.jsp"></definition>
+	
+
+</tiles-definitions>

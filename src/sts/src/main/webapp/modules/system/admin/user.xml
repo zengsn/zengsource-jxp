@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reposnse success="true">
+	<user>
+		<id>123</id>
+		<username>admin</username>
+		<email>admin@z-jxp.com</email>
+		<status>2</status>
+	</user>
+</reposnse>

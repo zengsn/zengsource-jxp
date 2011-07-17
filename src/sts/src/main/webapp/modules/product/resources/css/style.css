@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+table.product {
+	
+}
+table.product td img {
+	padding: 2px;
+	border: 1px #DCDCDC solid;
+}

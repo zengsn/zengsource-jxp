@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Admin Tiles -->
+	<definition name="product-config" template="/modules/product/admin/config.jsp"></definition>
+	<definition name="product-storehouse" template="/modules/product/admin/storehouse.jsp"></definition>
+	<definition name="product-catalog" template="/modules/product/admin/catalog.jsp"></definition>
+	<definition name="product-browser" template="/modules/product/admin/browser.jsp"></definition>
+	<definition name="product-editor" template="/modules/product/admin/editor.jsp"></definition>
+
+	<!-- Block Tiles -->
+	<definition name="product-list-block" template="/modules/product/blocks/view.jsp"></definition>
+	<definition name="product-list2-block" template="/modules/product/blocks/list2.jsp"></definition>
+	<definition name="product-view-block" template="/modules/product/blocks/view.jsp"></definition>
+
+</tiles-definitions>

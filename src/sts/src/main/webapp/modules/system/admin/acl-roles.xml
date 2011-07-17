@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+	<totalCount>20</totalCount>
+	<role>
+		<id>123</id>
+		<name>Super Admin</name>
+		<isWrapper>1</isWrapper>
+		<description>超级管理员</description>
+		<users>super</users>
+		<permissions>111</permissions>
+		<createdTime>2010-02-09</createdTime>
+	</role>
+	<role>
+		<id>133</id>
+		<name>Content Admin</name>
+		<isWrapper>0</isWrapper>
+		<description>内容管理员</description>
+		<users>zhangsan,lisi</users>
+		<permissions>111</permissions>
+		<createdTime>2010-02-09</createdTime>
+	</role>
+</response>

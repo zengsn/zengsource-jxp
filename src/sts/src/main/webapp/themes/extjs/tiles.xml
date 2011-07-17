@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name=".theme.ext" template="/themes/extjs/tiles.jsp">
+		<!-- put-attribute name="title" value="Tiles tutorial homepage" /-->
+		<put-attribute name="header" value="/themes/extjs/header.jsp" />
+		<put-attribute name="body" value="/themes/extjs/body.jsp" />
+		<put-attribute name="footer" value="/themes/extjs/footer.jsp" />
+	</definition>
+</tiles-definitions>

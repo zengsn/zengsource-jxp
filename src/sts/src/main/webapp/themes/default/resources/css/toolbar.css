@@ -1,0 +1,39 @@
+#navbar {
+}
+#navbar table.jxt-tk-tb-table {
+	height: 64px;
+}
+#navbar .jxt-tk-tb-td {
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	text-align: center;
+	vertical-align: top;
+}
+#navbar .jxt-tk-tb-td div {
+	vertical-align: top;
+	text-align: center;
+	border: 0px #DCDCDC solid;
+}
+#navbar .jxt-tk-tb-td div a {
+	/*color: #15428B;*/
+	color: White;
+	font-size: 12px;
+	text-decoration: none;
+}
+#navbar .jxt-tk-tb-td div a:hover {
+	font-weight: bolder;
+	text-decoration: underline;
+}
+#navbar .jxt-tk-td-img {
+	width: 75px;
+	height: 55px;
+	background: no-repeat;
+	background-position: center;
+	margin-bottom: 4px;
+}
+#navbar .jxt-tk-td-txt {
+}
+
+div.bar-video {
+}
