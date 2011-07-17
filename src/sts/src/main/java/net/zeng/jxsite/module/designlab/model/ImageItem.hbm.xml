@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.designlab.model.ImageItem" table="labimageitems" lazy="false">
+		
+		<id name="id" column="lii_id"></id>
+		<property name="name" column="lii_name" type="string" />
+		
+		<many-to-one 
+			name="image" 
+			class="net.zeng.jxsite.module.designlab.model.GalleryImage" 
+			column="lii_galleryimageid" />
+		
+		<many-to-one 
+			name="design" 
+			class="net.zeng.jxsite.module.designlab.model.Design" 
+			column="lii_designid" />
+		
+		<property name="x" column="lii_x" type="float" />
+		<property name="y" column="lii_y" type="float" />
+		<property name="z" column="lii_z" type="int" />
+		<property name="width" column="lii_width" type="int" />
+		<property name="height" column="lii_height" type="int" />
+		<property name="rotation" column="lii_rotation" type="int" />
+		<property name="isFront" column="lii_isfront" type="boolean" />
+		
+		<property name="description" column="lii_description" type="string" />
+		<property name="createdTime" column="lii_createdtime" type="timestamp" update="true" />
+		<property name="updatedTime" column="lii_updatedtime" type="timestamp" update="true" />
+		
+	</class>
+</hibernate-mapping>

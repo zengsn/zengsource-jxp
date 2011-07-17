@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>	
+	<class name="net.zeng.jxsite.module.designlab.model.Design" table="labdesigns" lazy="false">
+		<id name="id" column="ld_id"></id>
+		<property name="name" column="ld_name" type="string" />
+		<property name="email" column="ld_email" type="string" />
+		<property name="designer" column="ld_designer" type="string" />
+		
+		<property name="printFilename" column="ld_printfilename" type="string" />
+		<!-- property name="previewFilename" column="ld_previewfilename" type="string" /-->
+		
+		<many-to-one 
+			name="style" 
+			class="net.zeng.jxsite.module.product.model.Product" 
+			column="ld_styleid" />
+		
+		<set name="imageItems" lazy="false">
+			<key column="lii_designid" />
+			<one-to-many class="net.zeng.jxsite.module.designlab.model.ImageItem" not-found="exception"/>
+		</set>
+		
+		<property name="description" column="ld_description" type="string" />
+		<property name="createdTime" column="ld_createdtime" type="timestamp" update="true" />
+		<property name="updatedTime" column="ld_updatedtime" type="timestamp" update="true" />
+	</class>
+</hibernate-mapping>

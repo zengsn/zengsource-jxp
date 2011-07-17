@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.designlab.model.GalleryImage" table="labgalleryimages" lazy="false">
+		<id name="id" column="lgi_id"></id>
+		<property name="name" column="lgi_name" type="string" />
+		<property name="creator" column="lgi_creator" type="string" />
+		
+		<property name="status" column="lgi_status" type="int" />
+
+		<many-to-one name="catalog" column="lgi_catalogid"
+			not-null="false" cascade="none" insert="true" update="true"
+			class="net.zeng.jxsite.module.designlab.model.GalleryCatalog" />
+
+		<property name="filename" column="lgi_filename" type="string"/>
+		<property name="colorable" column="lgi_colorable" type="boolean" />
+		<property name="resizable" column="lgi_resizable" type="boolean" />
+		
+		<property name="description" column="lgi_description" type="string" />
+
+		<property name="createdTime" column="lgi_createdtime" type="timestamp" update="true" />
+		<property name="updatedTime" column="lgi_updatedtime" type="timestamp" update="true" />
+	</class>
+</hibernate-mapping>

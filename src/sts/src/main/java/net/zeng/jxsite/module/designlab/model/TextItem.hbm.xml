@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.designlab.model.TextItem" table="labtextitems" lazy="false">
+		
+		<id name="id" column="lti_id"></id>
+		<property name="name" column="lti_name" type="string" />
+		
+		<many-to-one 
+			name="font" 
+			class="net.zeng.jxsite.module.designlab.model.FontMeta" 
+			column="lti_fontid" />
+		
+		<many-to-one 
+			name="design" 
+			class="net.zeng.jxsite.module.designlab.model.Design" 
+			column="lti_designid" />
+		
+		<property name="z" column="lti_z" type="int" />
+		<property name="x" column="lti_x" type="float" />
+		<property name="y" column="lti_y" type="float" />
+		<property name="isFront" column="lti_isfront" type="boolean" />
+		
+		<property name="textSize" column="lti_textsize" type="int" />
+		<property name="textStyle" column="lti_textstyle" type="int" />
+		<property name="textColor" column="lti_textcolor" type="string" />
+		<property name="image" column="lti_image" type="string" />
+		
+		<property name="description" column="lti_description" type="string" />
+		<property name="createdTime" column="lti_createdtime" type="timestamp" update="true" />
+		<property name="updatedTime" column="lti_updatedtime" type="timestamp" update="true" />
+		
+	</class>
+</hibernate-mapping>

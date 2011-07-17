@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.designlab.model.FontMeta" table="labfontmetas" lazy="false">
+		
+		<id name="id" column="lfm_id"></id>
+		<property name="name" column="lfm_name" type="string" />
+		<property name="file" column="lfm_file" type="string" />
+		<property name="image" column="lfm_image" type="string" />		
+		
+		<property name="status" column="lfm_status" type="int" />
+		
+		<property name="description" column="lfm_description" type="string" />
+		<property name="createdTime" column="lfm_createdtime" type="timestamp" update="true" />
+		<property name="updatedTime" column="lfm_updatedtime" type="timestamp" update="true" />
+		
+	</class>
+</hibernate-mapping>

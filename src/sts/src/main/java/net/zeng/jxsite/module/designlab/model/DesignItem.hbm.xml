@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>	
+	<class name="net.zeng.jxsite.module.designlab.model.DesignItem" table="labdesignitems" lazy="false">
+		<id name="id" column="di_id"></id>
+		<property name="name" column="di_name" type="string" />
+		
+		<!-- 
+		   + Use One Table per Class Hierarchy to map DesignItem.
+		   + Short class name likes "ImageItem", "TextItem", etc.
+		   -->
+		<discriminator column="di_itemtype" type="string" />
+		
+		<property name="description" column="di_description" type="string" />
+		<property name="createdTime" column="di_createdtime" type="timestamp" update="true" />
+		<property name="updatedTime" column="di_updatedtime" type="timestamp" update="true" />
+	</class>
+</hibernate-mapping>

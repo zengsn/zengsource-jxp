@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+			
+	<bean id="galleryCatalogService" class="net.zeng.jxsite.module.designlab.service.GalleryCatalogServiceImpl">
+		<property name="galleryCatalogDao">
+			<ref bean="galleryCatalogDao" />
+		</property>
+	</bean>	
+	
+	<bean id="galleryImageService" class="net.zeng.jxsite.module.designlab.service.GalleryImageServiceImpl">
+		<property name="galleryImageDao">
+			<ref bean="galleryImageDao" />
+		</property>
+		<property name="galleryCatalogDao">
+			<ref bean="galleryCatalogDao" />
+		</property>
+	</bean>
+	
+	<bean id="designService" class="net.zeng.jxsite.module.designlab.service.DesignServiceImpl">
+		<property name="imageItemDao">
+			<ref bean="imageItemDao" />
+		</property>
+		<property name="designDao">
+			<ref bean="designDao" />
+		</property>
+	</bean>
+	
+	<bean id="fontMetaService" class="net.zeng.jxsite.module.designlab.service.FontMetaServiceImpl">
+		<property name="fontMetaDao">
+			<ref bean="fontMetaDao" />
+		</property>
+	</bean>
+
+</beans>

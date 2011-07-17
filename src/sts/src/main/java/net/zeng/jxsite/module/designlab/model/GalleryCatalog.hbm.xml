@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="net.zeng.jxsite.module.designlab.model.GalleryCatalog" table="labgallerycatalogs" lazy="false">
+		<id name="id" column="lgc_id"></id>
+		<property name="name" column="lgc_name" type="string" />
+		<property name="index" column="lgc_index" type="int" />
+		<property name="dirName" column="lgc_dirname" type="string" />
+		<property name="description" column="lgc_description" type="string" />
+
+		<many-to-one name="parent" column="lgc_parentid" not-null="false"
+			cascade="none" insert="true" update="true" />
+
+		<set name="children" lazy="false" cascade="none">
+			<key column="lgc_parentid" not-null="false" />
+			<one-to-many class="net.zeng.jxsite.module.designlab.model.GalleryCatalog"
+				not-found="ignore" />
+		</set>
+
+		<property name="createdTime" column="lgc_createdtime" type="timestamp"
+			update="true" />
+		<property name="updatedTime" column="lgc_updatedtime" type="timestamp"
+			update="true" />
+	</class>
+</hibernate-mapping>
